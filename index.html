@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio NikkkDevvv</title>
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- External Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+<script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+
+<link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body class="antialiased">
+
+<!-- Bagian Header -->
+<header id="topnav" class="flex items-center justify-between px-6 py-3">
+  <div class="flex items-center gap-4">
+    <div class="main-logo" style="background-image:url('img/nikk.jpg')"></div>
+  </div>
+
+  <!-- Bagian Navbar -->
+  <nav>
+    <ul class="flex gap-3 items-center text-sm">
+      <li><a href="#home" class="nav-link px-3 py-1 rounded-md hover:bg-white/6 transition">Home</a></li>
+      <li><a href="#profile" class="nav-link px-3 py-1 rounded-md hover:bg-white/6 transition">Our Profile</a></li>
+      <li><a href="#works" class="nav-link px-3 py-1 rounded-md hover:bg-white/6 transition">Portofolio</a></li>
+      <li><a href="#contact" class="nav-link px-3 py-1 rounded-md hover:bg-white/6 transition">Massage Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Toast -->
+<div id="toast" aria-live="polite" aria-atomic="true"></div>
+
+<!-- Bagian Hero -->
+<section id="home" class="hero-bg min-h-screen flex items-center justify-center text-center px-6 pt-20 relative overflow-hidden">
+  <div class="hero-parallax-layer l1" aria-hidden="true" style="background-image: url(img/bg.jpg);"></div>
+  <div class="hero-parallax-layer l2" aria-hidden="true"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="max-w-4xl mx-auto relative z-20">
+    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-white drop-shadow-lg hero-title"> 
+      <span id="typed" class="mr-2"></span>
+      <span id="user-name" class="text-yellow-300"></span>
+    </h1>
+    <p class="mt-6 text-gray-300 max-w-2xl mx-auto">We are committed to providing you with the <p style="color: goldenrod;">highest level of service.</p></p>
+
+    <div class="mt-8 flex gap-3 justify-center">
+      <button id="btn-explore" class="px-6 py-3 rounded-md btn-primary font-semibold shadow-lg hover:brightness-105 transition">Explore</button>
+      <button id="btn-contact" class="px-6 py-3 rounded-md btn-ghost text-white border-white/6 hover:bg-white/3 transition">Contact Me</button>
+    </div>
+  </div>
+</section>
+
+<!-- Profile -->
+<section id="profile" class="profile-section py-20 bg-transparent">
+  <div class="container mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div class="space-y-4" data-sr>
+        <h2 class="text-3xl font-bold">About Us</h2>
+        <p class="text-gray-300">Nikdevv is a creative team blending stunning visual aesthetics with 
+            smooth, intuitive interactions — delivering digital interfaces and experiences that feel elegant, classy, 
+            and timeless.
+
+        </p>
+
+        <ul class="mt-4 grid grid-cols-2 gap-2 text-sm text-gray-400">
+          <li>🌐 Web Development</li>
+          <li>⚙️ JavaScript & Frameworks</li>
+          <li>🖥️ Frontend Development</li>
+          <li>💡Creative Direction</li>
+        </ul>
+
+        <div class="mt-2 text-gray-300 text-sm" id="skill-desc">Hover a skill to see description.</div>
+
+        <div class="mt-6 flex gap-3">
+          <a href="#contact" id="btn-hire" class="px-5 py-2 rounded-md btn-primary">Hire me</a>
+          <button id="btn-resume" class="px-5 py-2 rounded-md btn-ghost">Download CV</button>
+        </div>
+      </div>
+
+<div class="card p-4 sm:p-6 rounded-xl shadow-lg max-w-sm mx-auto" data-sr>
+  <div class="rounded-lg overflow-hidden">
+    <img src="img/company.jpg" alt="Nikk" class="w-full object-cover h-72"/>
+  </div>
+  <div class="p-4 bg-gradient-to-t from-black/40 to-transparent">
+    <h4 class="font-semibold text-lg leading-tight">NikkkDevvv — Designer & Dev</h4>
+    <p class="text-sm text-gray-400 mt-1">
+      We are committed to providing consistent support and reliable assistance.
+    </p>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+<!-- bagian project -->
+<section id="works" class="projects-section py-20 bg-transparent" >
+  <div class="container mx-auto px-6">
+    <h3 class="text-2xl font-bold mb-6" data-sr>Projects Us</h3>
+    <div class="grid md:grid-cols-3 gap-6">
+      <article class="proj relative card rounded-lg overflow-hidden cursor-pointer" data-sr data-project="Project 1" data-desc="E-Commerce Horizon – Modern online store with seamless UI/UX." data-img="img/web dev.jpg">
+        <img src="img/web dev.jpg" alt="Project 1" class="w-full h-48 object-cover"/>
+        <div class="proj-overlay"></div>
+        <div class="p-4">
+          <h4 class="font-semibold">Project 1</h4>
+          <p class="text-sm text-gray-400 mt-1">E-Commerce Horizon – Modern online store with seamless UI/UX.</p>
+        </div>
+      </article>
+
+      <article class="proj relative card rounded-lg overflow-hidden cursor-pointer" data-sr data-project="Project 2" data-desc="AppFlow – Mobile application with interactive features." data-img="img/app dev.jpg">
+        <img src="img/app dev.jpg" alt="Project 2" class="w-full h-48 object-cover"/>
+        <div class="proj-overlay"></div>
+        <div class="p-4">
+          <h4 class="font-semibold">Project 2</h4>
+          <p class="text-sm text-gray-400 mt-1">AppFlow – Mobile application with interactive features.</p>
+        </div>
+      </article>
+
+      <article class="proj relative card rounded-lg overflow-hidden cursor-pointer" data-sr data-project="Project 3" data-desc="CyberShield – Advanced security protection platform." data-img="img/security.jpg">
+        <img src="img/security.jpg" alt="Project 3" class="w-full h-48 object-cover"/>
+        <div class="proj-overlay"></div>
+        <div class="p-4">
+          <h4 class="font-semibold">Project 3</h4>
+          <p class="text-sm text-gray-400 mt-1">CyberShield – Advanced security protection platform.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<!-- Contact -->
+<section id="contact" class="py-20 bg-transparent">
+  <div class="container mx-auto px-6 max-w-3xl">
+    <h3 class="text-2xl font-bold mb-4" data-sr>Contact Us</h3>
+
+    <form id="contact-form" class="space-y-4">
+      <!-- Nama -->
+      <label class="block">
+        <span class="text-sm text-gray-300">Your name</span>
+        <input id="c-name" class="mt-1 block w-full rounded-md p-3" placeholder="Your name" required />
+      </label>
+
+      <!-- Tanggal Lahir -->
+      <label class="block">
+          <span class="text-sm text-gray-300">Date of Birth</span>
+          <input type="date" id="c-dob" class="mt-1 block w-full rounded-md p-3" required />
+        </label>
+        
+        <!-- Jenis Kelamin -->
+        <label class="block">
+          <span class="text-sm text-gray-300">Gender</span>
+          <select id="c-gender" class="mt-1 block w-full rounded-md p-3" style="color: black;">
+            <option value="">Select gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </label>
+
+      <!-- Pesan -->
+      <label class="block">
+        <span class="text-sm text-gray-300">Your message</span>
+        <textarea id="c-message" class="mt-1 block w-full rounded-md p-3" rows="4" placeholder="Say hello..." required></textarea>
+      </label>
+
+      <!-- Tombol -->
+      <div class="flex items-center gap-3">
+        <button type="submit" class="px-5 py-2 rounded-md btn-primary">Send Message</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+<footer class="py-8 text-center text-sm text-gray-500">&copy; 2025 Nikk. All rights reserved.</footer>
+
+<!-- Script -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
